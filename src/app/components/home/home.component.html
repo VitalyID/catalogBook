@@ -1,9 +1,11 @@
-<p>home works!</p>
+@let list = (books | async | json);
+
 <div class="catalog">
   <div class="catalog__left"></div>
   <div class="catalog__right">
     <div class="catalog__contents">
       <h1>Оглавление книги</h1>
+      <pre>{{ list }}</pre>
     </div>
   </div>
 </div>
