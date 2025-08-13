@@ -1,0 +1,28 @@
+@mixin flex($fd: row, $jc: center, $align: center, $gap: 0) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $align;
+  gap: $gap;
+}
+
+.catalog {
+  padding: 40px;
+  background-color: rgb(202, 218, 219);
+  border-radius: 5px;
+  height: 100vh;
+
+  @include flex();
+
+  &__left {
+    width: 50%;
+    overflow: hidden;
+  }
+  &__right {
+    width: 50%;
+  }
+
+  &__contents {
+    height: 100vh;
+  }
+}
